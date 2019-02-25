@@ -1,0 +1,28 @@
+---
+title: "Leaflet"
+author: "Utkarsha Patil"
+date: "February 25, 2019"
+output: 
+html_document: 
+    fig_caption: yes
+    keep_md: yes
+    toc: yes
+  pdf_document: default
+  word_document: default
+  md_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r}
+library(leaflet)
+library(maps)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-97.773, lat=30.269, popup="Popular park in Austin downtown")
+m
+```
